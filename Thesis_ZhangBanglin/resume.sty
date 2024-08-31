@@ -1,0 +1,65 @@
+%%
+%% This is file `resume.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% resume.dtx  (with options: `package')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from resume.sty.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file resume.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+\NeedsTeXFormat{pLaTeX2e}
+\ProvidesPackage{resume}[2004/02/09 My macros]
+ % ########################
+ % 使い方
+ % \title{研究題名}
+ % \author{名前}{学籍番号}
+ % として，
+ % \maketitle
+ % する
+ % ########################
+\makeatletter
+\twocolumn
+\parindent      1em
+\topmargin      -0.7in
+\voffset        0.2in
+\headsep        0.1in
+\oddsidemargin  -0.6in
+\evensidemargin 0.0in
+\textwidth      7.3in
+\textheight     10.6in
+\renewcommand{\baselinestretch}{0}
+\date{2006/02/22}
+\renewcommand{\author}[2]{
+    \renewcommand{\@author}     {#1}
+    \newcommand{\@studentnumber}{#2}
+}
+\renewcommand{\maketitle}{
+ \twocolumn
+ [
+ \large
+ \begin{center}
+  {\LARGE \@title \par}
+ \end{center}
+ \begin{center}
+  \@studentnumber \ \ \@author
+ \end{center}
+ ]
+ \thispagestyle{empty}
+}
+\makeatother
+\endinput
+%%
+%% End of file `resume.sty'.
